@@ -1,0 +1,28 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Java_OOOO
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int numbertoguess = random.nextInt(100) + 1;
+        boolean WasNumberGuessed = false;
+        while (!WasNumberGuessed){
+            System.out.println("Podaj liczbę");
+            int usernumber = scanner.nextInt();
+            if (usernumber < numbertoguess){
+                System.out.println(" liczba jest za mała");
+            }
+            else if ( usernumber > numbertoguess) {
+                System.out.println(" liczba jest za duża");
+            }
+            else {
+                System.out.println(" Brawo odgadnales liczbe ");
+                WasNumberGuessed = true;
+            }
+        }
+
+    }
+}
